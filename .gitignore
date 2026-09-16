@@ -12,6 +12,7 @@ build64/
 build-linux-local/
 build-linux-make/
 build-linux-qt-vulkan/
+build-macos/
 build-mingw-direct/
 build-mingw-preset-debug/
 build-mingw-preset/
