@@ -5049,6 +5049,7 @@ public:
         }
 
         if (!LoadVulkanLoader()) {
+            DbgLog("[Render] LoadVulkanLoader failed\n");
             m_bootstrap.initHr = static_cast<int>(E_NOINTERFACE);
             if (outResult) {
                 *outResult = m_bootstrap;
@@ -5057,6 +5058,7 @@ public:
         }
 
         if (!CreateInstance()) {
+            DbgLog("[Render] CreateInstance failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5064,6 +5066,7 @@ public:
             return false;
         }
         if (!CreateSurface()) {
+            DbgLog("[Render] CreateSurface failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5071,6 +5074,7 @@ public:
             return false;
         }
         if (!PickPhysicalDevice()) {
+            DbgLog("[Render] PickPhysicalDevice failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5078,6 +5082,7 @@ public:
             return false;
         }
         if (!CreateLogicalDevice()) {
+            DbgLog("[Render] CreateLogicalDevice failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5085,6 +5090,7 @@ public:
             return false;
         }
         if (!CreateCommandPool()) {
+            DbgLog("[Render] CreateCommandPool failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5092,6 +5098,7 @@ public:
             return false;
         }
         if (!CreateSyncObjects()) {
+            DbgLog("[Render] CreateSyncObjects failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5099,6 +5106,7 @@ public:
             return false;
         }
         if (!CreatePipelineResources()) {
+            DbgLog("[Render] CreatePipelineResources failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }
@@ -5106,6 +5114,7 @@ public:
             return false;
         }
         if (!CreateSwapChainResources(VK_NULL_HANDLE)) {
+            DbgLog("[Render] CreateSwapChainResources failed\n");
             if (outResult) {
                 *outResult = m_bootstrap;
             }

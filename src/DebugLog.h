@@ -32,6 +32,7 @@ inline void DbgLog(const char* fmt, ...)
 
     // Write to debugger output (visible in VS Output window)
     OutputDebugStringA(line);
+    printf("%s\n", msg);
 
     // Also append to a per-process log file in the CWD.
     char logPath[MAX_PATH];
